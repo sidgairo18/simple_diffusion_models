@@ -104,6 +104,7 @@ def train(args):
     print("Dataloader, Model and Optimizer setup complete!")
     print("Training has started ...")
     model.train()
+    os.makedirs("./checkpoints", exist_ok=True)
     for epoch in range(args.epochs):
         print(f"Running Epoch: {epoch}")
         for i, (x, _) in enumerate(dataloader):
@@ -121,8 +122,9 @@ def train(args):
             if i % args.log_interval == 0:
                 print(f"Epoch [{epoch+1}/{args.epochs}] Batch [{i}] Loss: {loss.item():.4f}")
 
-    os.makedirs("./checkpoints", exist_ok=True)
-    torch.save(model.state_dict(), f"./checkpoints/diffusion_{args.dataset}.pt")
+        print(f"Checkpoint saved for Epoch: {epoch}")
+        torch.save(model.state_dict(), f"./checkpoints/diffusion_{args.dataset}.pt")
+
     print("Training complete.")
 
 

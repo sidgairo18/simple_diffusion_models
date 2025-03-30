@@ -19,5 +19,11 @@ python diffusion_tinyunet_mnist_cifar10.py --dataset "mnist" --inference --num_s
 |-------------------------------|-------------------------------|-------------------------------|-------------------------------|-------------------------------|
 | ![](samples/mnist_step_6.png) | ![](samples/mnist_step_7.png) | ![](samples/mnist_step_8.png) | ![](samples/mnist_step_9.png) | ![](samples/mnist_step_10.png) |
 
+### Random Qualitative Results on CIFAR10
+| ![](samples/cifar10_step_1.png) | ![](samples/cifar10_step_2.png) | ![](samples/cifar10_step_3.png) | ![](samples/cifar10_step_4.png) | ![](samples/cifar10_step_5.png) |
+|---------------------------------|---------------------------------|---------------------------------|---------------------------------|---------------------------------|
+| ![](samples/cifar10_step_6.png) | ![](samples/cifar10_step_7.png) | ![](samples/cifar10_step_8.png) | ![](samples/cifar10_step_9.png) | ![](samples/cifar10_step_10.png) |
+
+
 
 Easy peasy lemon squeezey &#x1F34B;

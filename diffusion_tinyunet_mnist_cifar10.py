@@ -143,7 +143,7 @@ def inference(args):
     model.load_state_dict(torch.load(f"./checkpoints/diffusion_{args.dataset}.pt", map_location=device))
     model.eval()
     print("Model setup for inference")
-    print("Inference running")
+    print("Inference running ...")
 
     os.makedirs("./samples", exist_ok=True)
 
@@ -178,6 +178,8 @@ def inference(args):
             #plt.show()
             plt.close()
 
+        print("Inference complete, sample images saved!")
+
 
 # -----------------------------
 # Argument Parser
@@ -193,7 +195,8 @@ if __name__ == "__main__":
     parser.add_argument("--num_samples", type=int, default=16, help="Number of samples to generate in inference")
     args = parser.parse_args()
 
-    train(args)
     if args.inference:
         inference(args)
+    else:
+        train(args)
 
